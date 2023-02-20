@@ -4,11 +4,11 @@ const app = require('./app');
 
 dotenv.config({ path: './config.env' });
 
-const port = process.env.PORT || 3000;
+const port = process.env.SERVER_PORT || 3000;
 
 mongoose.set('strictQuery', true);
 
-const DB = `mongodb://${process.env.HOST}/${process.env.DB_NAME}`;
+const DB = `mongodb://${process.env.DB_HOST}/${process.env.DB_NAME}`;
 
 mongoose
   .connect(DB, {
