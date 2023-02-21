@@ -1,16 +1,9 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-  idproduct: {
-    type: String,
-    required: [true, 'goods must have an id goods'],
-    unique: true,
-    trim: true,
-  },
   name: {
     type: String,
     required: [true, 'goods must have a name'],
-    unique: true,
     trim: true,
   },
   merk: {
@@ -23,11 +16,6 @@ const productSchema = new mongoose.Schema({
   },
   color: [String],
   size: [String],
-  barcode: {
-    type: String,
-    unique: true,
-    trim: true,
-  },
   category: {
     type: String,
     trim: true,
@@ -42,13 +30,22 @@ const productSchema = new mongoose.Schema({
     required: [true, 'goods must have a quantity'],
     default: 0,
   },
+  sku: {
+    type: String,
+    unique: true,
+    trim: true,
+  },
+  barcode: {
+    type: String,
+    trim: true,
+  },
   vendor: [String],
   unit: {
     type: String,
     trim: true,
   },
   imageUrl: {
-    type: String,
+    type: [String],
     trim: true,
   },
   sold: {

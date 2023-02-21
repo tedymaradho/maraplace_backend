@@ -1,7 +1,7 @@
 {
-  "name": "maraplace_backend",
+  "name": "marashop_backend",
   "version": "1.0.0",
-  "description": "Backend of market place with the name Maraplace",
+  "description": "Backend of ecommerce with the name Marashop",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon server.js -w"
