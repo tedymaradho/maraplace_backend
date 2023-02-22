@@ -4,7 +4,7 @@
   "description": "Backend of ecommerce with the name Marashop",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Tedy Maradho Pasa",
   "license": "ISC",
