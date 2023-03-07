@@ -17,6 +17,14 @@ const productSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
+  Size: {
+    type: String,
+    trim: true,
+  },
+  Gender: {
+    type: String,
+    trim: true,
+  },
   Desc: {
     type: String,
     trim: true,
