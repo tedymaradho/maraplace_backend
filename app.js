@@ -10,12 +10,12 @@ app.use(express.json());
 
 app.use(cors());
 
-// const path = __dirname + '/dist';
-// app.use(express.static(path));
+const path = __dirname + '/dist';
+app.use(express.static(path));
 
-// app.get('/', function (req, res) {
-//   res.sendFile(path + 'index.html');
-// });
+app.get('/', function (req, res) {
+  res.sendFile(path + 'index.html');
+});
 
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
