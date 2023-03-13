@@ -15,6 +15,8 @@ class APIFeatures {
       (match) => `$${match}`
     );
 
+    queryStr = queryStr.replace(/\Boptions/g, '","$options":"i');
+
     this.query = this.query.find(JSON.parse(queryStr));
 
     return this;

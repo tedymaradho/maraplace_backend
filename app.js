@@ -2,6 +2,7 @@ const express = require('express');
 const productRouter = require('./routes/productRoute');
 const userRouter = require('./routes/userRoute');
 const settingRouter = require('./routes/settingRoute');
+const cartRouter = require('./routes/cartRoute');
 const cors = require('cors');
 
 const app = express();
@@ -20,5 +21,6 @@ app.use(cors());
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
 app.use('/api/settings', settingRouter);
+app.use('/api/cart', cartRouter);
 
 module.exports = app;

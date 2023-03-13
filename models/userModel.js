@@ -1,39 +1,39 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  fullname: {
+  IdUser: {
     type: String,
-    required: true,
+    trim: true,
+    unique: true,
+    required: [true, 'user must have an id user'],
+  },
+  FullName: {
+    type: String,
+    required: [true, 'user must have a full name'],
+    trim: true,
+  },
+  Email: {
+    type: String,
     trim: true,
     unique: true,
   },
-  email: {
+  Password: {
     type: String,
-    required: true,
     trim: true,
-    unique: true,
   },
-  password: {
+  Position: {
     type: String,
-    required: true,
-    trim: true,
-    default: 'password',
-  },
-  position: {
-    type: String,
-    required: true,
     trim: true,
     default: 'Cashier',
   },
-  authority: {
+  Authority: {
     type: [String],
-    required: true,
     default: ['Cashier'],
   },
-  createdAt: {
+  CreatedAt: {
     type: Date,
   },
-  updatedAt: {
+  UpdatedAt: {
     type: Date,
   },
 });

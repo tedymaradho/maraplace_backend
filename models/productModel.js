@@ -7,7 +7,7 @@ const productSchema = new mongoose.Schema({
     required: [true, 'Product must have an id product'],
     trim: true,
   },
-  Name: {
+  ProductName: {
     type: String,
     unique: true,
     required: [true, 'Product must have a name'],
@@ -42,7 +42,7 @@ const productSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  PriceAfterDisc: {
+  SalePrice: {
     type: Number,
     default: 0,
   },
