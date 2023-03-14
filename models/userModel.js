@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
+  Photo: {
+    type: String,
+    trim: true,
+  },
   Position: {
     type: String,
     trim: true,
