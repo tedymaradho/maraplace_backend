@@ -1,5 +1,5 @@
-const User = require('../models/userModel');
-const APIFeatures = require('../utils/apiFeatures');
+const User = require('./../models/userModel');
+const APIFeatures = require('./../utils/apiFeatures');
 
 exports.getAllUsers = async (req, res) => {
   try {

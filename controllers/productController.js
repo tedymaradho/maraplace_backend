@@ -1,5 +1,5 @@
-const Product = require('../models/productModel');
-const APIFeatures = require('../utils/apiFeatures');
+const Product = require('./../models/productModel');
+const APIFeatures = require('./../utils/apiFeatures');
 
 exports.getAllProducts = async (req, res) => {
   try {

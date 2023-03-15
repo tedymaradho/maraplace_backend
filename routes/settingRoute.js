@@ -1,4 +1,4 @@
-const settingController = require('../controllers/settingController');
+const settingController = require('./../controllers/settingController');
 const express = require('express');
 
 const router = express.Router();

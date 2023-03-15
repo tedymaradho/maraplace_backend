@@ -1,5 +1,5 @@
-const Setting = require('../models/settingModel');
-const APIFeatures = require('../utils/apiFeatures');
+const Setting = require('./../models/settingModel');
+const APIFeatures = require('./../utils/apiFeatures');
 
 exports.getAllSettings = async (req, res) => {
   try {

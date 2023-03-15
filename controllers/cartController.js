@@ -1,5 +1,5 @@
-const Cart = require('../models/cartModel');
-const APIFeatures = require('../utils/apiFeatures');
+const Cart = require('./../models/cartModel');
+const APIFeatures = require('./../utils/apiFeatures');
 
 exports.getAllCartItem = async (req, res) => {
   try {
