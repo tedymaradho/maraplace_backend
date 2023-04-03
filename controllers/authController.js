@@ -24,15 +24,15 @@ exports.signup = catchAsync(async (req, res, next) => {
 });
 
 exports.login = catchAsync(async (req, res, next) => {
-  const { Email, Password } = req.body;
+  const { email, password } = req.body;
 
-  if (!Email || !Password) {
+  if (!email || !password) {
     return next(new AppError('Please provide email and password', 400));
   }
 
-  const user = await User.findOne({ Email }).select('+Password');
+  const user = await User.findOne({ email }).select('+password');
 
-  const correct = await user.correctPassword(Password, user.Password);
+  const correct = await user.correctPassword(password, user.password);
 
   if (!user || !correct) {
     return next(new AppError('Incorrect email and password', 401));
@@ -43,9 +43,7 @@ exports.login = catchAsync(async (req, res, next) => {
   res.status(201).json({
     status: 'success',
     data: {
-      Username: user.Username,
-      Email: user.Email,
-      FullName: user.FullName,
+      email: user.email,
       token,
     },
   });
@@ -67,7 +65,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 
   const decode = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
 
-  console.log(decode);
+  // console.log(decode);
 
   next();
 });

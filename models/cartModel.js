@@ -1,45 +1,45 @@
 const mongoose = require('mongoose');
 
 const cartSchema = new mongoose.Schema({
-  IdProduct: {
+  id_product: {
     type: String,
     trim: true,
     required: [true, 'cart must have an Id Product'],
   },
-  ImageUrl: {
+  image_url: {
     type: String,
     trim: true,
   },
-  ProductName: {
+  product_name: {
     type: String,
     trim: true,
   },
-  Price: {
+  price: {
     type: Number,
     default: 0,
   },
-  Disc: {
+  disc: {
     type: Number,
     default: 0,
   },
-  SalePrice: {
+  sale_price: {
     type: Number,
     default: 0,
   },
-  Qty: {
+  qty: {
     type: Number,
     default: 0,
   },
-  SubTotal: {
+  sub_total: {
     type: Number,
     default: 0,
   },
-  IdUser: {
+  email: {
     type: String,
     trim: true,
-    required: [true, 'cart must have an Id User'],
+    required: [true, 'cart must have an Email User'],
   },
-  Note: {
+  note: {
     type: String,
     trim: true,
   },

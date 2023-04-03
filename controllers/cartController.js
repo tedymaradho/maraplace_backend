@@ -81,13 +81,13 @@ exports.getCartStats = async (req, res) => {
   try {
     const stats = await Cart.aggregate([
       {
-        $match: { IdUser: req.params.id },
+        $match: { email: req.params.id },
       },
       {
         $group: {
-          _id: '$IdUser',
-          sumQty: { $sum: '$Qty' },
-          sumSubTotal: { $sum: '$SubTotal' },
+          _id: '$email',
+          sumQty: { $sum: '$qty' },
+          sumSubTotal: { $sum: '$sub_total' },
         },
       },
     ]);

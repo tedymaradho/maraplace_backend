@@ -1,28 +1,28 @@
 const mongoose = require('mongoose');
 
 const settingSchema = new mongoose.Schema({
-  IdSetting: {
+  id_setting: {
     type: String,
     required: [true, 'Setting must have an ID'],
     unique: true,
     trim: true,
   },
-  SetName: {
+  set_name: {
     type: String,
     trim: true,
   },
-  Set1: {
+  set_1: {
     type: [String],
     trim: true,
   },
-  Set2: {
-    type: String,
+  set_2: {
+    type: [String],
     trim: true,
   },
-  CreatedAt: {
+  created_at: {
     type: Date,
   },
-  UpdatedAt: {
+  updated_at: {
     type: Date,
   },
 });

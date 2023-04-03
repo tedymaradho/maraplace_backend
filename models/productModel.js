@@ -1,86 +1,86 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-  IdProduct: {
+  id_product: {
     type: String,
     unique: true,
     required: [true, 'Product must have an id product'],
     trim: true,
   },
-  ProductName: {
+  product_name: {
     type: String,
     unique: true,
     required: [true, 'Product must have a name'],
     trim: true,
   },
-  Merk: {
+  merk: {
     type: String,
     trim: true,
   },
-  Size: {
+  size: {
     type: String,
     trim: true,
   },
-  Gender: {
+  gender: {
     type: String,
     trim: true,
   },
-  Desc: {
+  desc: {
     type: String,
     trim: true,
   },
-  Category: {
+  category: {
     type: String,
     trim: true,
     required: [true, 'Product must have a category'],
   },
-  Price: {
+  price: {
     type: Number,
     required: [true, 'Product must have a price'],
   },
-  Disc: {
+  disc: {
     type: Number,
     default: 0,
   },
-  SalePrice: {
+  sale_price: {
     type: Number,
     default: 0,
   },
-  Stock: {
+  stock: {
     type: Number,
     required: [true, 'Product must have a stock'],
     default: 0,
   },
-  UnitName: {
+  unit_name: {
     type: String,
     trim: true,
   },
-  Barcode: {
+  barcode: {
     type: String,
     trim: true,
   },
-  ImageUrl: {
+  image_url: {
     type: [String],
     trim: true,
   },
-  Vendor: [String],
-  Sold: {
+  vendor: [String],
+  sold: {
     type: Number,
     default: 0,
   },
-  Flag: {
+  flag: {
     type: String,
     trim: true,
   },
-  Status: {
+  status: {
     type: String,
     trim: true,
     default: 'active',
   },
-  CreatedAt: {
+  created_at: {
     type: Date,
   },
-  UpdatedAt: {
+  updated_at: {
     type: Date,
   },
 });
