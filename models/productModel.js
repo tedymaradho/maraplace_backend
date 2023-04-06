@@ -51,7 +51,7 @@ const productSchema = new mongoose.Schema({
     required: [true, 'Product must have a stock'],
     default: 0,
   },
-  unit_name: {
+  uom_name: {
     type: String,
     trim: true,
   },
@@ -59,7 +59,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-  image_url: {
+  images: {
     type: [String],
     trim: true,
   },
