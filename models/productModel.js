@@ -59,10 +59,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-  images: {
-    type: [String],
-    trim: true,
-  },
+  images: [String],
   vendor: [String],
   sold: {
     type: Number,
