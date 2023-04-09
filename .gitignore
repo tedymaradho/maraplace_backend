@@ -3,4 +3,3 @@ public
 dist
 package-lock.json
 *.zip
-config.env
